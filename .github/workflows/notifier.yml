@@ -5,15 +5,37 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
-
+    
 jobs:
-  notifyTelegram:
+
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: send custom message
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ secrets.TELEGRAM_TO }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: |
-            ${{ github.event.issue.user.login }} just made a ${{ github.event_name }} to ${{ github.event.repository.name }} repo.
+    - uses: actions/checkout@main
+    - name: send custom message with args
+      uses: ./
+      with:
+        to: ${{ secrets.TELEGRAM_TO }}
+        token: ${{ secrets.TELEGRAM_TOKEN }}
+        args: The ${{ github.event_name }} event triggered first step.
+
+    - name: send custom message
+      uses: ./
+      with:
+        to: ${{ secrets.TELEGRAM_TO }}
+        token: ${{ secrets.TELEGRAM_TOKEN }}
+        message: |
+          ${{ github.event.issue.user.login }} just made a ${{ github.event_name }} to ${{ github.event.repository.name }} repo.
+
+# jobs:
+#   notifyTelegram:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: send custom message
+#         uses: appleboy/telegram-action@master
+#         with:
+#           to: ${{ secrets.TELEGRAM_TO }}
+#           token: ${{ secrets.TELEGRAM_TOKEN }}
+#           message: |
+#             ${{ github.event.issue.user.login }} just made a ${{ github.event_name }} to ${{ github.event.repository.name }} repo.
