@@ -16,4 +16,4 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-            Username ${{ github.event.issue.user.login }} just made a ${{ github.event_name }} to ${{ github.event.repository.name }}.
+            @${{ github.event.issue.user.login }} just made a ${{ github.event_name }} to ${{ github.event.repository.name }}.
