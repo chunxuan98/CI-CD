@@ -22,7 +22,9 @@ Group chat link: https://t.me/+t1Q4XOTSV6xlNmY1
 
 ### 1.3 Obtaining chat id
 * Open terminal
-* Execute the following code, replacing `<TOKEN>` with the ***token*** obtained in ***1.1***: `curl https://api.telegram.org/bot<TOKEN>/getUpdates`
+* Execute the following code, replacing `<TOKEN>` with the ***token*** obtained in ***1.1***:
+  
+  `curl https://api.telegram.org/bot<TOKEN>/getUpdates`
 * Obtain ***chat id*** from API response below (XXXXXXXXX in this case):
 ```json
   {
