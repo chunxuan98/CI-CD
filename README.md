@@ -87,7 +87,7 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-            ${{ github.event.issue.user.login }} just made a ${{ github.event_name }} to ${{ github.event.repository.name }} repo: ${{ github.event.head_commit.message }}
+            The ${{ github.event_name }} event triggered final step.
 ```
 ### 1.5 Commit a change
 * Commit any change and wait for your bot to notify you!
