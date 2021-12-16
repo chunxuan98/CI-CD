@@ -1,5 +1,7 @@
 # Github Actions bot on Telegram
 
+Using [telegram-action](https://github.com/appleboy/telegram-action) to integrate Github Actions and Telegram bot.
+
 ## Outcome
 The ***CI-CD Bot*** will send a message in the ***Github updates*** group chat each time someone commits a change in this repository.
 
