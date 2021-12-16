@@ -1,4 +1,5 @@
 # CI-CD Bot on Telegram
 
-CI-CD Bot sends a message on Telegram group chat each time someone commits a change.
-
+### Outcome
+The CI-CD Bot will send a message in the 'Github updates' group chat each time someone commits a change in this repository.
+Group chat link: https://t.me/+t1Q4XOTSV6xlNmY1
