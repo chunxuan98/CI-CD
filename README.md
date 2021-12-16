@@ -7,7 +7,7 @@ Group chat link: https://t.me/+t1Q4XOTSV6xlNmY1
 
 ## Steps
 
-### Creating a new bot
+### 1.1 Creating a new bot
 [Following documentation](https://core.telegram.org/bots#6-botfather):
 * Go to [BotFather](https://t.me/botfather) and select 'SEND MESSAGE'
 * Start a chat and use `/newbot` to create a new bot
@@ -15,7 +15,47 @@ Group chat link: https://t.me/+t1Q4XOTSV6xlNmY1
 * Send the **username** of your bot, it must end with 'bot'/'Bot'
 * A **token** will be generated e.g. `110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw`
 
-### Creating a chat with the new
+### 1.2 Creating a chat with the new
 * Search for your bot's **name** and select it
 * Send the message `/start`
 * Send any message e.g. `hello`
+
+### 1.3 Obtaining chat id
+* Open terminal
+* Execute the following code, replacing <TOKEN> with the **token** obtained in **1.1**: `curl https://api.telegram.org/bot<TOKEN>/getUpdates`
+* Obtain chat id from API response below (XXXXXXXXX in this case):
+```json
+  {
+   "ok":true,
+   "result":[
+      {
+         "update_id":777368030,
+         "message":{
+            "message_id":1,
+            "from":{
+               "id":1234567890,
+               "is_bot":false,
+               "first_name":"YourUserName",
+               "username":"YourTelegramUser",
+               "language_code":"pt-br"
+            },
+            "chat":{
+               "id":XXXXXXXXX,
+               "first_name":"YourUserName",
+               "username":"YourTelegramUser",
+               "type":"private"
+            },
+            "date":1234567890,
+            "text":"/start",
+            "entities":[
+               {
+                  "offset":0,
+                  "length":6,
+                  "type":"bot_command"
+               }
+            ]
+         }
+      }
+   ]
+}
+```
