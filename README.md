@@ -90,3 +90,5 @@ jobs:
 ```
 ### 1.5 Commit a change
 * Commit any change and wait for your bot to notify you!
+
+### 2.1 Adding bot to a chat group
