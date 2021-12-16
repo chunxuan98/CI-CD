@@ -92,3 +92,7 @@ jobs:
 * Commit any change and wait for your bot to notify you!
 
 ### 2.1 Adding bot to a chat group
+* Add your bot into a chat group
+* Repeat ***1.3*** and obtain the latest ***chat id*** from API response
+* Set secret `secrets.TELEGRAM_TO` = latest ***chat id***
+* Done! Commit any change and wait for your bot to notify the group chat!
