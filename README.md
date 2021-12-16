@@ -63,10 +63,10 @@ Group chat link: https://t.me/+t1Q4XOTSV6xlNmY1
 ```
 
 ### 1.4 Configuring action
-* In Github, got to 'Settings' => 'Actions' => 'New repository secret'
+* In repo, go to 'Settings' => 'Actions' => 'New repository secret'
   * Create secret `secrets.TELEGRAM_TO` = ***chat id***, this secret tells the bot which chat to send the message to
   * Create secret `secrets.TELEGRAM_TOKEN` = ***token***
-* In Github, go to 'Actions' => 'set up a workflow yourself'
+* In repo, go to 'Actions' => 'set up a workflow yourself'
 * Paste in the following code:
 ```yml
 name: Notifier
