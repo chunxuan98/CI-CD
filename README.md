@@ -15,7 +15,7 @@ Group chat link: https://t.me/+t1Q4XOTSV6xlNmY1
 * Send the ***username*** of your bot, it must end with 'bot'/'Bot'
 * A ***token*** will be generated e.g. `110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw`
 
-### 1.2 Creating a chat with the new
+### 1.2 Creating a chat with the new bot
 * Search for your bot's ***name*** and select it
 * Send the message `/start`
 * Send any message e.g. `hello`
