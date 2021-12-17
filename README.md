@@ -65,7 +65,7 @@ Group chat link: https://t.me/+t1Q4XOTSV6xlNmY1
 ```
 
 ### 1.4 Configuring action
-* In repo, go to 'Settings' => 'Actions' => 'New repository secret'
+* In repo, go to 'Settings' => 'Secrets' => 'New repository secret'
   * Create secret `secrets.TELEGRAM_TO` = ***chat id***, this secret tells the bot which chat to send the message to
   * Create secret `secrets.TELEGRAM_TOKEN` = ***token***
 * In repo, go to 'Actions' => 'set up a workflow yourself'
@@ -99,5 +99,3 @@ jobs:
 * Repeat ***1.3*** and obtain the latest ***chat id*** from API response
 * Set secret `secrets.TELEGRAM_TO` = latest ***chat id***
 * Done! Commit any change and wait for your bot to notify the group chat!
-
-
